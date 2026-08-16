@@ -24,8 +24,14 @@ app.add_middleware(
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = BASE_DIR / "Models" / "cifar10_cnn.pth"
+CLASS_NAMES_PATH = BASE_DIR / "Models" / "class_names.json"
+
 model = torch.load(
-    r"D:\projects\CIFAR10_CNN\Models\cifar10_cnn.pth",
+    MODEL_PATH,
     map_location=device,
     weights_only=False
 )
@@ -33,7 +39,7 @@ model = torch.load(
 model = model.to(device)
 model.eval()
 
-with open(r"D:\projects\CIFAR10_CNN\Models\class_names.json", "r") as f:
+with open(CLASS_NAMES_PATH, "r") as f:
     class_names = json.load(f)
 
 transform = transforms.Compose([
