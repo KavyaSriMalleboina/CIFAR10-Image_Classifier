@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="container p-3 bg-grey">
+    <h1 class="title">IMAGE CLASSIFIER</h1>
+    <div class="row g-2">
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                ✈️ Airplane
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🚗 Automobile
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🐦 Bird
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🐱 Cat
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🦌 Deer
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🐶 Dog
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🐸 Frog
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🐴 Horse
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🚢 Ship
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="border rounded p-2 text-center class-box">
+                🚚 Truck
+            </div>
+        </div>
+    </div>
+    <p class="text-center p-3">Upload a '<strong>.jpg</strong>' image of the above categories.</p>
+
+    <div class="text-center">
+        <input type="file" id="imageInput" accept=".jpg" class="form-control-file mb-3">
+        <button id="uploadButton" class="btn btn-primary ">Upload</button>
+    </div>
+
+    <div id="resultContainer" class="mt-4">
+
+        <div class="image-preview">
+            <img id="uploadedImage" src="" alt="Uploaded Image" class="img-fluid rounded"
+                style="max-width: 300px; display: none;">
+        </div>
+
+        <div id="predictionResult" style="display: none;">
+
+            <h3 id="predictedClass"></h3>
+
+            <div id="probabilityChart"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
