@@ -11,7 +11,7 @@ function handleImageUpload() {
             const formData = new FormData();
             formData.append('image', imageInput);
 
-            const response = await fetch('http://localhost:8000/predict', {
+            const response = await fetch('https://cifar10-cnn-server.onrender.com/predict', {
                 method: 'POST',
                 body: formData
             });
