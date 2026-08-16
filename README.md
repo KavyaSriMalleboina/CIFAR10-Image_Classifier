@@ -6,7 +6,7 @@ The trained model is integrated with a **FastAPI backend** and a simple **HTML/C
 
 ## Live Demo
 
-**[Live Website](YOUR_RENDER_URL_HERE)**
+**https://cifar10-image-classifier-95e3.onrender.com**
 
 
 
@@ -185,7 +185,7 @@ The exact probability values depend on the uploaded image.
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/KavyaSriMalleboina/CIFAR10-Image_Classifier.git
 cd CIFAR10_CNN
 ```
 
